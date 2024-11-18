@@ -10,7 +10,7 @@ namespace st_accounting
 {
     internal class DBconnection
     {
-        static string connectionString = @"Server=DESKTOP-TDSIDOR\SQLEXPRESS;Database=student_accounting;Trusted_Connection=True; Integrated Security=True;Encrypt=False";
+        static string connectionString = @"Server=(localdb)\mssqllocaldb;Database=student_accounting;Trusted_Connection=True; Integrated Security=True;Encrypt=False";
         static public SqlDataAdapter msDataAdapter;
         static SqlConnection connection;
         static public SqlCommand msCommand;

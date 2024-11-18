@@ -35,19 +35,19 @@ namespace st_accounting
                     switch (Login_Class.role)
                     {
                         case "Студент":
-                            //this.Hide();
-                            //StudentMenuForm studentMenuForm = new StudentMenuForm();
-                            //studentMenuForm.Show();
+                            this.Hide();
+                            StudentMenuForm studentMenuForm = new StudentMenuForm(Login_Class.id_entity, Login_Class.role, full_name);
+                            studentMenuForm.Show();
                             break;
                         case "Преподаватель":
-                            //this.Hide();
-                            //TeacherMenuForm teacherMenuForm = new TeacherMenuForm();
-                            //teacherMenuForm.Show();
+                            this.Hide();
+                            TeacherMenuForm teacherMenuForm = new TeacherMenuForm(Login_Class.id_entity, full_name);
+                            teacherMenuForm.Show();
                             break;
                         case "Администратор":
-                            //this.Hide();
-                            //AdminMenuForm adminMenuForm = new AdminMenuForm();
-                            //adminMenuForm.Show();
+                            this.Hide();
+                            AdminMenuForm adminMenuForm = new AdminMenuForm();
+                            adminMenuForm.Show();
                             break;
                     }
                 }

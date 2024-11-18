@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMenuForm.Designer.cs">
+      <DependentUpon>AdminMenuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBconnection.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -62,6 +68,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentMenuForm.Designer.cs">
+      <DependentUpon>StudentMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Class.cs" />
+    <Compile Include="TeacherMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherMenuForm.Designer.cs">
+      <DependentUpon>TeacherMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher_Class.cs" />
+    <EmbeddedResource Include="AdminMenuForm.resx">
+      <DependentUpon>AdminMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,6 +97,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StudentMenuForm.resx">
+      <DependentUpon>StudentMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherMenuForm.resx">
+      <DependentUpon>TeacherMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
