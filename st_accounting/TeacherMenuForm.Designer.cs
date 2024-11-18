@@ -51,7 +51,7 @@
             // 
             // examsButton
             // 
-            this.examsButton.Location = new System.Drawing.Point(231, 37);
+            this.examsButton.Location = new System.Drawing.Point(235, 37);
             this.examsButton.Name = "examsButton";
             this.examsButton.Size = new System.Drawing.Size(210, 44);
             this.examsButton.TabIndex = 1;
