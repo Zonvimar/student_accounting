@@ -22,6 +22,7 @@ namespace st_accounting
             InitializeComponent();
             Student_Class.getStudentExams(student_id);
             examsGridView.DataSource = Student_Class.dtExams;
+            labelCount.Text = "Количество экзаменов: " + Student_Class.dtExams.Rows.Count.ToString();
             labelHi.Text = role + " " + full_name + ", добро пожаловать!";
         }
 
@@ -30,6 +31,16 @@ namespace st_accounting
             this.Hide();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
+        }
+
+        private void StudentMenuForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void examsGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

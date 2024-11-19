@@ -1,6 +1,6 @@
 ﻿namespace st_accounting
 {
-    partial class StudentMenuForm
+    partial class TeacherExamsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentMenuForm));
             this.examsGridView = new System.Windows.Forms.DataGridView();
             this.id_exam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.full_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subject_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.control_type_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backButton = new System.Windows.Forms.Button();
-            this.labelHi = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelCount = new System.Windows.Forms.Label();
+            this.allExamsBtn = new System.Windows.Forms.Button();
+            this.studentsCbx = new System.Windows.Forms.ComboBox();
+            this.searchExamsBtn = new System.Windows.Forms.Button();
+            this.addBtn = new System.Windows.Forms.Button();
+            this.editBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.examsGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,18 +53,18 @@
             this.examsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.examsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_exam,
+            this.full_name,
             this.subject_name,
             this.control_type_name,
             this.date,
             this.grade});
-            this.examsGridView.Location = new System.Drawing.Point(14, 42);
+            this.examsGridView.Location = new System.Drawing.Point(14, 60);
             this.examsGridView.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.examsGridView.Name = "examsGridView";
             this.examsGridView.ReadOnly = true;
             this.examsGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.examsGridView.Size = new System.Drawing.Size(826, 390);
-            this.examsGridView.TabIndex = 0;
-            this.examsGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.examsGridView_CellContentClick);
+            this.examsGridView.Size = new System.Drawing.Size(1128, 390);
+            this.examsGridView.TabIndex = 1;
             // 
             // id_exam
             // 
@@ -71,6 +73,14 @@
             this.id_exam.Name = "id_exam";
             this.id_exam.ReadOnly = true;
             this.id_exam.Visible = false;
+            // 
+            // full_name
+            // 
+            this.full_name.DataPropertyName = "full_name";
+            this.full_name.HeaderText = "Имя студента";
+            this.full_name.Name = "full_name";
+            this.full_name.ReadOnly = true;
+            this.full_name.Width = 300;
             // 
             // subject_name
             // 
@@ -105,64 +115,87 @@
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(715, 444);
+            this.backButton.Location = new System.Drawing.Point(1017, 462);
             this.backButton.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(125, 44);
-            this.backButton.TabIndex = 1;
+            this.backButton.TabIndex = 2;
             this.backButton.Text = "Назад";
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
-            // labelHi
+            // allExamsBtn
             // 
-            this.labelHi.AutoSize = true;
-            this.labelHi.Font = new System.Drawing.Font("Segoe UI Light", 14.25F);
-            this.labelHi.Location = new System.Drawing.Point(12, 455);
-            this.labelHi.Name = "labelHi";
-            this.labelHi.Size = new System.Drawing.Size(0, 25);
-            this.labelHi.TabIndex = 14;
+            this.allExamsBtn.Location = new System.Drawing.Point(928, 15);
+            this.allExamsBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.allExamsBtn.Name = "allExamsBtn";
+            this.allExamsBtn.Size = new System.Drawing.Size(214, 33);
+            this.allExamsBtn.TabIndex = 7;
+            this.allExamsBtn.Text = "Показать все экзамены";
+            this.allExamsBtn.UseVisualStyleBackColor = true;
+            this.allExamsBtn.Click += new System.EventHandler(this.allExamsBtn_Click);
             // 
-            // label1
+            // studentsCbx
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 25);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Список ваших экзаменов:";
+            this.studentsCbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.studentsCbx.FormattingEnabled = true;
+            this.studentsCbx.Location = new System.Drawing.Point(14, 15);
+            this.studentsCbx.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.studentsCbx.Name = "studentsCbx";
+            this.studentsCbx.Size = new System.Drawing.Size(355, 33);
+            this.studentsCbx.TabIndex = 8;
             // 
-            // labelCount
+            // searchExamsBtn
             // 
-            this.labelCount.AutoSize = true;
-            this.labelCount.Location = new System.Drawing.Point(619, 9);
-            this.labelCount.Name = "labelCount";
-            this.labelCount.Size = new System.Drawing.Size(204, 25);
-            this.labelCount.TabIndex = 16;
-            this.labelCount.Text = "Количество экзаменов:";
+            this.searchExamsBtn.Location = new System.Drawing.Point(379, 15);
+            this.searchExamsBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.searchExamsBtn.Name = "searchExamsBtn";
+            this.searchExamsBtn.Size = new System.Drawing.Size(130, 33);
+            this.searchExamsBtn.TabIndex = 9;
+            this.searchExamsBtn.Text = "Найти";
+            this.searchExamsBtn.UseVisualStyleBackColor = true;
+            this.searchExamsBtn.Click += new System.EventHandler(this.searchExamsBtn_Click);
             // 
-            // StudentMenuForm
+            // addBtn
+            // 
+            this.addBtn.Location = new System.Drawing.Point(14, 462);
+            this.addBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(136, 44);
+            this.addBtn.TabIndex = 10;
+            this.addBtn.Text = "Добавить";
+            this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
+            // 
+            // editBtn
+            // 
+            this.editBtn.Location = new System.Drawing.Point(160, 462);
+            this.editBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.editBtn.Name = "editBtn";
+            this.editBtn.Size = new System.Drawing.Size(136, 44);
+            this.editBtn.TabIndex = 11;
+            this.editBtn.Text = "Изменить";
+            this.editBtn.UseVisualStyleBackColor = true;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
+            // 
+            // TeacherExamsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 500);
-            this.Controls.Add(this.labelCount);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.labelHi);
+            this.ClientSize = new System.Drawing.Size(1156, 521);
+            this.Controls.Add(this.editBtn);
+            this.Controls.Add(this.addBtn);
+            this.Controls.Add(this.searchExamsBtn);
+            this.Controls.Add(this.studentsCbx);
+            this.Controls.Add(this.allExamsBtn);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.examsGridView);
             this.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.MaximumSize = new System.Drawing.Size(870, 539);
-            this.MinimumSize = new System.Drawing.Size(870, 539);
-            this.Name = "StudentMenuForm";
-            this.Text = "Экзамены";
-            this.Load += new System.EventHandler(this.StudentMenuForm_Load);
+            this.Name = "TeacherExamsForm";
+            this.Text = "TeacherExamsForm";
             ((System.ComponentModel.ISupportInitialize)(this.examsGridView)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -170,13 +203,16 @@
 
         private System.Windows.Forms.DataGridView examsGridView;
         private System.Windows.Forms.Button backButton;
-        private System.Windows.Forms.Label labelHi;
+        private System.Windows.Forms.Button allExamsBtn;
+        private System.Windows.Forms.ComboBox studentsCbx;
+        private System.Windows.Forms.Button searchExamsBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_exam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn full_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn subject_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn control_type_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
         private System.Windows.Forms.DataGridViewTextBoxColumn grade;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelCount;
+        private System.Windows.Forms.Button addBtn;
+        private System.Windows.Forms.Button editBtn;
     }
 }

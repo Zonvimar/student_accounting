@@ -36,5 +36,20 @@ namespace st_accounting
         {
 
         }
+
+        private void studentsButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TeacherStudentsForm teacherStudentsForm = new TeacherStudentsForm();
+            teacherStudentsForm.Show();
+
+        }
+
+        private void examsButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TeacherExamsForm teacherExamsForm = new TeacherExamsForm();
+            teacherExamsForm.Show();
+        }
     }
 }

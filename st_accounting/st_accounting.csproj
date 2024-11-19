@@ -53,6 +53,9 @@
       <DependentUpon>AdminMenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DBconnection.cs" />
+    <Compile Include="Exams_Class.cs" />
+    <Compile Include="Faculties_Class.cs" />
+    <Compile Include="Groups_Class.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +71,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Specialties_Class.cs" />
     <Compile Include="StudentMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,11 +79,29 @@
       <DependentUpon>StudentMenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Student_Class.cs" />
+    <Compile Include="TeacherExamsActionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherExamsActionsForm.Designer.cs">
+      <DependentUpon>TeacherExamsActionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherExamsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherExamsForm.Designer.cs">
+      <DependentUpon>TeacherExamsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeacherMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TeacherMenuForm.Designer.cs">
       <DependentUpon>TeacherMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherStudentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherStudentsForm.Designer.cs">
+      <DependentUpon>TeacherStudentsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Teacher_Class.cs" />
     <EmbeddedResource Include="AdminMenuForm.resx">
@@ -100,8 +122,17 @@
     <EmbeddedResource Include="StudentMenuForm.resx">
       <DependentUpon>StudentMenuForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TeacherExamsActionsForm.resx">
+      <DependentUpon>TeacherExamsActionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherExamsForm.resx">
+      <DependentUpon>TeacherExamsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TeacherMenuForm.resx">
       <DependentUpon>TeacherMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherStudentsForm.resx">
+      <DependentUpon>TeacherStudentsForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

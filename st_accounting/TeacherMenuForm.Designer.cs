@@ -33,8 +33,8 @@
             this.backButton = new System.Windows.Forms.Button();
             this.labelHi = new System.Windows.Forms.Label();
             this.subjectsTeacherGriedView = new System.Windows.Forms.DataGridView();
-            this.labelSubjects = new System.Windows.Forms.Label();
             this.subject_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelSubjects = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.subjectsTeacherGriedView)).BeginInit();
@@ -48,6 +48,7 @@
             this.studentsButton.TabIndex = 0;
             this.studentsButton.Text = "Студенты";
             this.studentsButton.UseVisualStyleBackColor = true;
+            this.studentsButton.Click += new System.EventHandler(this.studentsButton_Click);
             // 
             // examsButton
             // 
@@ -57,6 +58,7 @@
             this.examsButton.TabIndex = 1;
             this.examsButton.Text = "Экзамены";
             this.examsButton.UseVisualStyleBackColor = true;
+            this.examsButton.Click += new System.EventHandler(this.examsButton_Click);
             // 
             // backButton
             // 
@@ -96,6 +98,14 @@
             this.subjectsTeacherGriedView.Size = new System.Drawing.Size(393, 395);
             this.subjectsTeacherGriedView.TabIndex = 14;
             // 
+            // subject_name
+            // 
+            this.subject_name.DataPropertyName = "subject_name";
+            this.subject_name.HeaderText = "Наименование";
+            this.subject_name.Name = "subject_name";
+            this.subject_name.ReadOnly = true;
+            this.subject_name.Width = 350;
+            // 
             // labelSubjects
             // 
             this.labelSubjects.AutoSize = true;
@@ -106,13 +116,6 @@
             this.labelSubjects.TabIndex = 15;
             this.labelSubjects.Text = "Предметы которые вы ведете:";
             this.labelSubjects.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // subject_name
-            // 
-            this.subject_name.DataPropertyName = "subject_name";
-            this.subject_name.HeaderText = "Наименование";
-            this.subject_name.Name = "subject_name";
-            this.subject_name.Width = 350;
             // 
             // button1
             // 

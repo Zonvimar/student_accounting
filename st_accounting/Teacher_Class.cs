@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace st_accounting
 {
-    internal class Teacher_Class : DBconnection
+    class Teacher_Class : DBconnection
     {
         static public DataTable dtSubjects = new DataTable();
 
@@ -16,7 +16,13 @@ namespace st_accounting
         {
             try
             {
-                msCommand.CommandText = @"SELECT subject_name FROM subjects WHERE id_teacher='" + id_teacher + "'";
+                msCommand.CommandText = @"
+                    SELECT 
+                        subject_name
+                    FROM 
+                        subjects
+                    WHERE 
+                        subjects.id_teacher = '" + id_teacher + "'";
                 dtSubjects.Clear();
                 msDataAdapter.SelectCommand = msCommand;
                 msDataAdapter.Fill(dtSubjects);
@@ -26,6 +32,5 @@ namespace st_accounting
                 MessageBox.Show("Ошибка при получении данных", "Ошибка...", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
     }
 }
