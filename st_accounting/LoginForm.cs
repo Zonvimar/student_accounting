@@ -54,12 +54,19 @@ namespace st_accounting
                 else
                 {
                     MessageBox.Show("Аккаунт не найден!", "Проверьте введеные данные!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    loginTextBox.Text = "";
+                    passwordTextBox.Text = "";
                 }
             }
             else
             {
                 MessageBox.Show("Пожалуйста, заполните все необзодимые поля!", "Заполнение полей", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void loginTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -14,14 +14,12 @@ namespace st_accounting
 
         static public void Authorization(string login, string password)
         {
-            try
-            {
+            //try
+            //{
                 msCommand.CommandText = @"SELECT roles.role_name, entrance.id_entity 
                           FROM roles, entrance 
-                          WHERE entrance.login = @login AND entrance.password = @password 
+                          WHERE entrance.login = '" + login + "' AND entrance.password = '" + password + @"'
                           AND entrance.id_role = roles.id_role";
-                msCommand.Parameters.AddWithValue("@login", login);
-                msCommand.Parameters.AddWithValue("@password", password);
                 using (var reader = msCommand.ExecuteReader())
                 {
                     if (reader.Read())
@@ -36,12 +34,12 @@ namespace st_accounting
                         id_entity = null;
                     }
                 }
-            }
-            catch
-            {
-                role = null;
-                MessageBox.Show("Ошибка при авторизации", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //}
+            //catch
+            //{
+            //    role = null;
+            //    MessageBox.Show("Ошибка при авторизации", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         static public string AuthorizationName(string id_entity, string role)

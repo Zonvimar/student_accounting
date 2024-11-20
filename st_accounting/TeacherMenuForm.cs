@@ -51,5 +51,17 @@ namespace st_accounting
             TeacherExamsForm teacherExamsForm = new TeacherExamsForm();
             teacherExamsForm.Show();
         }
+
+        private void reportScholarship_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reportBadGrades_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StudentsWithBadGradesForm studentsWithBadGradesForm = new StudentsWithBadGradesForm();
+            studentsWithBadGradesForm.Show();
+        }
     }
 }

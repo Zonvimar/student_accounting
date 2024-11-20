@@ -16,6 +16,23 @@ namespace st_accounting
         {
             InitializeComponent();
             LoadStudents();
+            string query = @"
+                    SELECT 
+                        exams.id_exam,
+                        students.full_name,
+                        subjects.subject_name, 
+                        control_types.control_type_name, 
+                        exams.date, 
+                        exams.grade 
+                    FROM 
+                        exams
+                    INNER JOIN 
+                        students ON exams.id_student = students.id_student
+                    INNER JOIN 
+                        subjects ON exams.id_subject = subjects.id_subject
+                    INNER JOIN 
+                        control_types ON exams.id_control_type = control_types.id_control_type";
+            LoadExams(query);
         }
 
         private void LoadExams(string query)
@@ -110,12 +127,62 @@ namespace st_accounting
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-
+            //this.Hide();
+            TeacherExamsActionsForm teacherExamsActionsForm = new TeacherExamsActionsForm(false);
+            teacherExamsActionsForm.ShowDialog();
         }
+
+        static public string exam_id;
 
         private void editBtn_Click(object sender, EventArgs e)
         {
+            //this.Hide();
+            exam_id = examsGridView.CurrentRow.Cells[0].Value.ToString();
+            TeacherExamsActionsForm teacherExamsActionsForm = new TeacherExamsActionsForm(true, int.Parse(exam_id));
+            teacherExamsActionsForm.ShowDialog();
+        }
 
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string id_exam = examsGridView.CurrentRow.Cells[0].Value.ToString();
+                DialogResult del = MessageBox.Show("Вы уверены что хотите удалить информацию об этом экзамене?", "Подтвердите удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (del == DialogResult.Yes)
+                {
+                    try
+                    {
+                        string query = @"
+                                SELECT 
+                                    exams.id_exam,
+                                    students.full_name,
+                                    subjects.subject_name, 
+                                    control_types.control_type_name, 
+                                    exams.date, 
+                                    exams.grade 
+                                FROM 
+                                    exams
+                                INNER JOIN 
+                                    students ON exams.id_student = students.id_student
+                                INNER JOIN 
+                                    subjects ON exams.id_subject = subjects.id_subject
+                                INNER JOIN 
+                                    control_types ON exams.id_control_type = control_types.id_control_type";
+                        Exams_Class.DeleteExam(id_exam);
+                        LoadExams(query);
+                        MessageBox.Show("Вы успешно удалили экзамен", "Успешно!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Экзамен не был удален", "Ошибка...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка при удалении", "Ошибка...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

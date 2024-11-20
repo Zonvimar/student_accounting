@@ -46,17 +46,62 @@ namespace st_accounting
 
         static public void getStudentsByQuery(string query)
         {
-            //try
-            //{
+            try
+            {
                 msCommand.CommandText = query;
                 dtStudents.Clear();
                 msDataAdapter.SelectCommand = msCommand;
                 msDataAdapter.Fill(dtStudents);
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Ошибка при получении данных (студенты)", "Ошибка...", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка при получении данных (студенты)", "Ошибка...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        static public void getStudentsWithBadGrades()
+        {
+            try
+            {
+                msCommand.CommandText = @"
+                    SELECT 
+                        f.faculty_name,
+                        s.specialty_name,
+                        g.course,
+                        g.group_number,
+                        st.full_name,
+                        COUNT(e.grade) AS grade_count
+                    FROM 
+                        students st
+                    INNER JOIN 
+                        groups g ON st.id_group = g.id_group
+                    INNER JOIN 
+                        specialties s ON g.id_specialty = s.id_specialty
+                    INNER JOIN 
+                        faculties f ON s.id_faculty = f.id_faculty
+                    INNER JOIN 
+                        exams e ON st.id_student = e.id_student
+                    WHERE 
+                        e.grade = '2'
+                    GROUP BY 
+                        f.faculty_name, 
+                        s.specialty_name, 
+                        g.course, 
+                        g.group_number, 
+                        st.full_name
+                    ORDER BY 
+                        g.course, 
+                        g.group_number, 
+                        st.full_name;";
+
+                msDataAdapter.SelectCommand = msCommand;
+                    dtStudents.Clear();
+                    msDataAdapter.Fill(dtStudents);
+            }
+            catch
+            {
+                MessageBox.Show($"Ошибка при получении данных студентов", "Ошибка...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

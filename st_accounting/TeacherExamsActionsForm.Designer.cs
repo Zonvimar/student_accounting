@@ -41,17 +41,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.backBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelTop
             // 
             this.labelTop.AutoSize = true;
             this.labelTop.Font = new System.Drawing.Font("Segoe UI", 18.25F);
-            this.labelTop.Location = new System.Drawing.Point(38, 15);
+            this.labelTop.Location = new System.Drawing.Point(61, 16);
             this.labelTop.Name = "labelTop";
-            this.labelTop.Size = new System.Drawing.Size(268, 35);
+            this.labelTop.Size = new System.Drawing.Size(225, 35);
             this.labelTop.TabIndex = 0;
-            this.labelTop.Text = "Добавление экзамена";
+            this.labelTop.Text = "Добавить экзамен";
             // 
             // controlTypeCbx
             // 
@@ -94,9 +98,11 @@
             // 
             this.gradeTbx.Location = new System.Drawing.Point(15, 370);
             this.gradeTbx.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.gradeTbx.MaxLength = 1;
             this.gradeTbx.Name = "gradeTbx";
             this.gradeTbx.Size = new System.Drawing.Size(316, 33);
             this.gradeTbx.TabIndex = 5;
+            this.gradeTbx.TextChanged += new System.EventHandler(this.gradeTbx_TextChanged);
             // 
             // label6
             // 
@@ -105,9 +111,9 @@
             this.label6.Location = new System.Drawing.Point(11, 347);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 23);
+            this.label6.Size = new System.Drawing.Size(66, 23);
             this.label6.TabIndex = 31;
-            this.label6.Text = "Оценка:";
+            this.label6.Text = "Оценка";
             // 
             // label5
             // 
@@ -116,9 +122,9 @@
             this.label5.Location = new System.Drawing.Point(11, 275);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 23);
+            this.label5.Size = new System.Drawing.Size(43, 23);
             this.label5.TabIndex = 30;
-            this.label5.Text = "Дата:";
+            this.label5.Text = "Дата";
             // 
             // label3
             // 
@@ -127,9 +133,9 @@
             this.label3.Location = new System.Drawing.Point(11, 205);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 23);
+            this.label3.Size = new System.Drawing.Size(110, 23);
             this.label3.TabIndex = 29;
-            this.label3.Text = "Тип контроля:";
+            this.label3.Text = "Тип контроля";
             // 
             // actionButton
             // 
@@ -139,6 +145,7 @@
             this.actionButton.TabIndex = 6;
             this.actionButton.Text = "Добавить";
             this.actionButton.UseVisualStyleBackColor = true;
+            this.actionButton.Click += new System.EventHandler(this.actionButton_Click);
             // 
             // label2
             // 
@@ -147,9 +154,9 @@
             this.label2.Location = new System.Drawing.Point(11, 134);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 23);
+            this.label2.Size = new System.Drawing.Size(76, 23);
             this.label2.TabIndex = 27;
-            this.label2.Text = "Предмет:";
+            this.label2.Text = "Предмет";
             // 
             // label4
             // 
@@ -158,13 +165,13 @@
             this.label4.Location = new System.Drawing.Point(11, 63);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 23);
+            this.label4.Size = new System.Drawing.Size(68, 23);
             this.label4.TabIndex = 26;
-            this.label4.Text = "Студент:";
+            this.label4.Text = "Студент";
             // 
             // backBtn
             // 
-            this.backBtn.Location = new System.Drawing.Point(16, 472);
+            this.backBtn.Location = new System.Drawing.Point(15, 470);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(315, 36);
             this.backBtn.TabIndex = 32;
@@ -172,11 +179,63 @@
             this.backBtn.UseVisualStyleBackColor = true;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Light", 10.25F);
+            this.label1.ForeColor = System.Drawing.Color.DarkRed;
+            this.label1.Location = new System.Drawing.Point(73, 63);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 19);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "*";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Light", 10.25F);
+            this.label7.ForeColor = System.Drawing.Color.DarkRed;
+            this.label7.Location = new System.Drawing.Point(82, 134);
+            this.label7.Margin = new System.Windows.Forms.Padding(0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(15, 19);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "*";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Light", 10.25F);
+            this.label8.ForeColor = System.Drawing.Color.DarkRed;
+            this.label8.Location = new System.Drawing.Point(117, 206);
+            this.label8.Margin = new System.Windows.Forms.Padding(0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(15, 19);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "*";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Light", 10.25F);
+            this.label9.ForeColor = System.Drawing.Color.DarkRed;
+            this.label9.Location = new System.Drawing.Point(47, 277);
+            this.label9.Margin = new System.Windows.Forms.Padding(0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(15, 19);
+            this.label9.TabIndex = 36;
+            this.label9.Text = "*";
+            // 
             // TeacherExamsActionsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(349, 520);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.controlTypeCbx);
             this.Controls.Add(this.subjectsCbx);
@@ -214,5 +273,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -28,99 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.examsButton = new System.Windows.Forms.Button();
             this.studentsButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.usersBtn = new System.Windows.Forms.Button();
+            this.facultiesButton = new System.Windows.Forms.Button();
+            this.specialtiesButton = new System.Windows.Forms.Button();
+            this.groupsButton = new System.Windows.Forms.Button();
+            this.subjetsButton = new System.Windows.Forms.Button();
+            this.teachersButton = new System.Windows.Forms.Button();
+            this.controlTypesButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // examsButton
-            // 
-            this.examsButton.Location = new System.Drawing.Point(345, 12);
-            this.examsButton.Name = "examsButton";
-            this.examsButton.Size = new System.Drawing.Size(166, 44);
-            this.examsButton.TabIndex = 4;
-            this.examsButton.Text = "Экзамены";
-            this.examsButton.UseVisualStyleBackColor = true;
-            // 
             // studentsButton
             // 
-            this.studentsButton.Location = new System.Drawing.Point(676, 116);
+            this.studentsButton.Location = new System.Drawing.Point(193, 66);
             this.studentsButton.Name = "studentsButton";
             this.studentsButton.Size = new System.Drawing.Size(166, 44);
             this.studentsButton.TabIndex = 8;
             this.studentsButton.Text = "Студенты";
             this.studentsButton.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // usersBtn
             // 
-            this.button1.Location = new System.Drawing.Point(531, 441);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 44);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Пользователи";
-            this.button1.UseVisualStyleBackColor = true;
+            this.usersBtn.Location = new System.Drawing.Point(676, 12);
+            this.usersBtn.Name = "usersBtn";
+            this.usersBtn.Size = new System.Drawing.Size(166, 44);
+            this.usersBtn.TabIndex = 9;
+            this.usersBtn.Text = "Пользователи";
+            this.usersBtn.UseVisualStyleBackColor = true;
+            this.usersBtn.Click += new System.EventHandler(this.usersBtn_Click);
             // 
-            // button2
+            // facultiesButton
             // 
-            this.button2.Location = new System.Drawing.Point(12, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(166, 44);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Факультеты";
-            this.button2.UseVisualStyleBackColor = true;
+            this.facultiesButton.Location = new System.Drawing.Point(12, 12);
+            this.facultiesButton.Name = "facultiesButton";
+            this.facultiesButton.Size = new System.Drawing.Size(166, 44);
+            this.facultiesButton.TabIndex = 1;
+            this.facultiesButton.Text = "Факультеты";
+            this.facultiesButton.UseVisualStyleBackColor = true;
+            this.facultiesButton.Click += new System.EventHandler(this.facultiesButton_Click);
             // 
-            // button3
+            // specialtiesButton
             // 
-            this.button3.Location = new System.Drawing.Point(12, 66);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(166, 44);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Специальности";
-            this.button3.UseVisualStyleBackColor = true;
+            this.specialtiesButton.Location = new System.Drawing.Point(12, 66);
+            this.specialtiesButton.Name = "specialtiesButton";
+            this.specialtiesButton.Size = new System.Drawing.Size(166, 44);
+            this.specialtiesButton.TabIndex = 2;
+            this.specialtiesButton.Text = "Специальности";
+            this.specialtiesButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // groupsButton
             // 
-            this.button4.Location = new System.Drawing.Point(12, 120);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(166, 44);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Группы";
-            this.button4.UseVisualStyleBackColor = true;
+            this.groupsButton.Location = new System.Drawing.Point(12, 120);
+            this.groupsButton.Name = "groupsButton";
+            this.groupsButton.Size = new System.Drawing.Size(166, 44);
+            this.groupsButton.TabIndex = 3;
+            this.groupsButton.Text = "Группы";
+            this.groupsButton.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // subjetsButton
             // 
-            this.button5.Location = new System.Drawing.Point(676, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(166, 44);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Предметы";
-            this.button5.UseVisualStyleBackColor = true;
+            this.subjetsButton.Location = new System.Drawing.Point(12, 228);
+            this.subjetsButton.Name = "subjetsButton";
+            this.subjetsButton.Size = new System.Drawing.Size(166, 44);
+            this.subjetsButton.TabIndex = 6;
+            this.subjetsButton.Text = "Предметы";
+            this.subjetsButton.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // teachersButton
             // 
-            this.button6.Location = new System.Drawing.Point(676, 66);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(166, 44);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "Преподователи";
-            this.button6.UseVisualStyleBackColor = true;
+            this.teachersButton.Location = new System.Drawing.Point(193, 12);
+            this.teachersButton.Name = "teachersButton";
+            this.teachersButton.Size = new System.Drawing.Size(166, 44);
+            this.teachersButton.TabIndex = 7;
+            this.teachersButton.Text = "Преподователи";
+            this.teachersButton.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // controlTypesButton
             // 
-            this.button7.Location = new System.Drawing.Point(345, 62);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(166, 44);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Типы контроля";
-            this.button7.UseVisualStyleBackColor = true;
+            this.controlTypesButton.Location = new System.Drawing.Point(12, 174);
+            this.controlTypesButton.Name = "controlTypesButton";
+            this.controlTypesButton.Size = new System.Drawing.Size(166, 44);
+            this.controlTypesButton.TabIndex = 5;
+            this.controlTypesButton.Text = "Типы контроля";
+            this.controlTypesButton.UseVisualStyleBackColor = true;
             // 
             // backButton
             // 
@@ -142,7 +134,6 @@
             this.label1.Size = new System.Drawing.Size(442, 37);
             this.label1.TabIndex = 12;
             this.label1.Text = "Добро пожаловать в админ-панель!";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // AdminMenuForm
             // 
@@ -151,37 +142,34 @@
             this.ClientSize = new System.Drawing.Size(854, 500);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.backButton);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.examsButton);
+            this.Controls.Add(this.controlTypesButton);
+            this.Controls.Add(this.teachersButton);
+            this.Controls.Add(this.subjetsButton);
+            this.Controls.Add(this.groupsButton);
+            this.Controls.Add(this.specialtiesButton);
+            this.Controls.Add(this.facultiesButton);
+            this.Controls.Add(this.usersBtn);
             this.Controls.Add(this.studentsButton);
             this.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.MaximumSize = new System.Drawing.Size(870, 539);
             this.MinimumSize = new System.Drawing.Size(870, 539);
             this.Name = "AdminMenuForm";
-            this.Text = "AdminMenuForm";
+            this.Text = "Админ-панель";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button examsButton;
         private System.Windows.Forms.Button studentsButton;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button usersBtn;
+        private System.Windows.Forms.Button facultiesButton;
+        private System.Windows.Forms.Button specialtiesButton;
+        private System.Windows.Forms.Button groupsButton;
+        private System.Windows.Forms.Button subjetsButton;
+        private System.Windows.Forms.Button teachersButton;
+        private System.Windows.Forms.Button controlTypesButton;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label label1;
     }

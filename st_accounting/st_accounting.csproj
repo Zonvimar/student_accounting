@@ -54,6 +54,12 @@
     </Compile>
     <Compile Include="DBconnection.cs" />
     <Compile Include="Exams_Class.cs" />
+    <Compile Include="FacultiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacultiesForm.Designer.cs">
+      <DependentUpon>FacultiesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Faculties_Class.cs" />
     <Compile Include="Groups_Class.cs" />
     <Compile Include="LoginForm.cs">
@@ -63,12 +69,6 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Login_Class.cs" />
-    <Compile Include="Mau.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mau.Designer.cs">
-      <DependentUpon>Mau.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Specialties_Class.cs" />
@@ -78,7 +78,14 @@
     <Compile Include="StudentMenuForm.Designer.cs">
       <DependentUpon>StudentMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentsWithBadGradesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentsWithBadGradesForm.Designer.cs">
+      <DependentUpon>StudentsWithBadGradesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student_Class.cs" />
+    <Compile Include="Subjects_Class.cs" />
     <Compile Include="TeacherExamsActionsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,8 +111,18 @@
       <DependentUpon>TeacherStudentsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Teacher_Class.cs" />
+    <Compile Include="UsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersForm.Designer.cs">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Class.cs" />
     <EmbeddedResource Include="AdminMenuForm.resx">
       <DependentUpon>AdminMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacultiesForm.resx">
+      <DependentUpon>FacultiesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -122,6 +139,9 @@
     <EmbeddedResource Include="StudentMenuForm.resx">
       <DependentUpon>StudentMenuForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StudentsWithBadGradesForm.resx">
+      <DependentUpon>StudentsWithBadGradesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TeacherExamsActionsForm.resx">
       <DependentUpon>TeacherExamsActionsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherStudentsForm.resx">
       <DependentUpon>TeacherStudentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersForm.resx">
+      <DependentUpon>UsersForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

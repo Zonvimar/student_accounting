@@ -94,6 +94,7 @@
             this.loginTextBox.Name = "loginTextBox";
             this.loginTextBox.Size = new System.Drawing.Size(255, 33);
             this.loginTextBox.TabIndex = 9;
+            this.loginTextBox.TextChanged += new System.EventHandler(this.loginTextBox_TextChanged);
             // 
             // LoginForm
             // 

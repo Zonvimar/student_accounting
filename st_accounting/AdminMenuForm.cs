@@ -17,16 +17,25 @@ namespace st_accounting
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
+        }
+
+        private void usersBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UsersForm usersForm = new UsersForm();
+            usersForm.Show();
+        }
+
+        private void facultiesButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FacultiesForm facultiesForm = new FacultiesForm();
+            facultiesForm.Show();
         }
     }
 }

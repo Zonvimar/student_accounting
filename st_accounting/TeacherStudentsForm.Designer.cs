@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.studentsDataGridView = new System.Windows.Forms.DataGridView();
-            this.facultiesCbx = new System.Windows.Forms.ComboBox();
-            this.backButton = new System.Windows.Forms.Button();
-            this.specialtiesCbx = new System.Windows.Forms.ComboBox();
-            this.groupsCbx = new System.Windows.Forms.ComboBox();
-            this.allStudentsBtn = new System.Windows.Forms.Button();
             this.student_id_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.full_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date_birth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.group_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.course = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.facultiesCbx = new System.Windows.Forms.ComboBox();
+            this.backButton = new System.Windows.Forms.Button();
+            this.specialtiesCbx = new System.Windows.Forms.ComboBox();
+            this.groupsCbx = new System.Windows.Forms.ComboBox();
+            this.allStudentsBtn = new System.Windows.Forms.Button();
             this.searchStudentsBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.studentsDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +65,54 @@
             this.studentsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.studentsDataGridView.Size = new System.Drawing.Size(1306, 519);
             this.studentsDataGridView.TabIndex = 0;
+            // 
+            // student_id_number
+            // 
+            this.student_id_number.DataPropertyName = "student_id_number";
+            this.student_id_number.HeaderText = "Номер студ. билета";
+            this.student_id_number.Name = "student_id_number";
+            this.student_id_number.ReadOnly = true;
+            this.student_id_number.Width = 250;
+            // 
+            // full_name
+            // 
+            this.full_name.DataPropertyName = "full_name";
+            this.full_name.HeaderText = "Полное имя";
+            this.full_name.Name = "full_name";
+            this.full_name.ReadOnly = true;
+            this.full_name.Width = 300;
+            // 
+            // sex
+            // 
+            this.sex.DataPropertyName = "sex";
+            this.sex.HeaderText = "Пол";
+            this.sex.Name = "sex";
+            this.sex.ReadOnly = true;
+            this.sex.Width = 110;
+            // 
+            // date_birth
+            // 
+            this.date_birth.DataPropertyName = "date_birth";
+            this.date_birth.HeaderText = "Дата рождения";
+            this.date_birth.Name = "date_birth";
+            this.date_birth.ReadOnly = true;
+            this.date_birth.Width = 200;
+            // 
+            // group_number
+            // 
+            this.group_number.DataPropertyName = "group_number";
+            this.group_number.HeaderText = "Номер группы";
+            this.group_number.Name = "group_number";
+            this.group_number.ReadOnly = true;
+            this.group_number.Width = 200;
+            // 
+            // course
+            // 
+            this.course.DataPropertyName = "course";
+            this.course.HeaderText = "Курс";
+            this.course.Name = "course";
+            this.course.ReadOnly = true;
+            this.course.Width = 200;
             // 
             // facultiesCbx
             // 
@@ -120,54 +168,6 @@
             this.allStudentsBtn.UseVisualStyleBackColor = true;
             this.allStudentsBtn.Click += new System.EventHandler(this.allStudentsBtn_Click);
             // 
-            // student_id_number
-            // 
-            this.student_id_number.DataPropertyName = "student_id_number";
-            this.student_id_number.HeaderText = "Номер студ. билета";
-            this.student_id_number.Name = "student_id_number";
-            this.student_id_number.ReadOnly = true;
-            this.student_id_number.Width = 250;
-            // 
-            // full_name
-            // 
-            this.full_name.DataPropertyName = "full_name";
-            this.full_name.HeaderText = "Полное имя";
-            this.full_name.Name = "full_name";
-            this.full_name.ReadOnly = true;
-            this.full_name.Width = 300;
-            // 
-            // sex
-            // 
-            this.sex.DataPropertyName = "sex";
-            this.sex.HeaderText = "Пол";
-            this.sex.Name = "sex";
-            this.sex.ReadOnly = true;
-            this.sex.Width = 110;
-            // 
-            // date_birth
-            // 
-            this.date_birth.DataPropertyName = "date_birth";
-            this.date_birth.HeaderText = "Дата рождения";
-            this.date_birth.Name = "date_birth";
-            this.date_birth.ReadOnly = true;
-            this.date_birth.Width = 200;
-            // 
-            // group_number
-            // 
-            this.group_number.DataPropertyName = "group_number";
-            this.group_number.HeaderText = "Номер группы";
-            this.group_number.Name = "group_number";
-            this.group_number.ReadOnly = true;
-            this.group_number.Width = 200;
-            // 
-            // course
-            // 
-            this.course.DataPropertyName = "course";
-            this.course.HeaderText = "Курс";
-            this.course.Name = "course";
-            this.course.ReadOnly = true;
-            this.course.Width = 200;
-            // 
             // searchStudentsBtn
             // 
             this.searchStudentsBtn.Location = new System.Drawing.Point(838, 15);
@@ -194,7 +194,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "TeacherStudentsForm";
-            this.Text = "TeacherStudentsForm";
+            this.Text = "Студенты";
             ((System.ComponentModel.ISupportInitialize)(this.studentsDataGridView)).EndInit();
             this.ResumeLayout(false);
 

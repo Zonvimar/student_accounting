@@ -41,6 +41,7 @@
             this.searchExamsBtn = new System.Windows.Forms.Button();
             this.addBtn = new System.Windows.Forms.Button();
             this.editBtn = new System.Windows.Forms.Button();
+            this.deleteBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.examsGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,11 +179,23 @@
             this.editBtn.UseVisualStyleBackColor = true;
             this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
+            // deleteBtn
+            // 
+            this.deleteBtn.Location = new System.Drawing.Point(306, 462);
+            this.deleteBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(136, 44);
+            this.deleteBtn.TabIndex = 12;
+            this.deleteBtn.Text = "Удалить";
+            this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
+            // 
             // TeacherExamsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1156, 521);
+            this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.editBtn);
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.searchExamsBtn);
@@ -193,7 +206,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "TeacherExamsForm";
-            this.Text = "TeacherExamsForm";
+            this.Text = "Экзамены";
             ((System.ComponentModel.ISupportInitialize)(this.examsGridView)).EndInit();
             this.ResumeLayout(false);
 
@@ -214,5 +227,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn grade;
         private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.Button editBtn;
+        private System.Windows.Forms.Button deleteBtn;
     }
 }

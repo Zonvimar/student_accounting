@@ -35,8 +35,8 @@
             this.subjectsTeacherGriedView = new System.Windows.Forms.DataGridView();
             this.subject_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelSubjects = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.reportScholarship = new System.Windows.Forms.Button();
+            this.reportBadGrades = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.subjectsTeacherGriedView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +66,7 @@
             this.backButton.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(125, 44);
-            this.backButton.TabIndex = 2;
+            this.backButton.TabIndex = 4;
             this.backButton.Text = "Назад";
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
@@ -96,7 +96,7 @@
             this.subjectsTeacherGriedView.ReadOnly = true;
             this.subjectsTeacherGriedView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.subjectsTeacherGriedView.Size = new System.Drawing.Size(393, 395);
-            this.subjectsTeacherGriedView.TabIndex = 14;
+            this.subjectsTeacherGriedView.TabIndex = 5;
             // 
             // subject_name
             // 
@@ -117,31 +117,33 @@
             this.labelSubjects.Text = "Предметы которые вы ведете:";
             this.labelSubjects.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
+            // reportScholarship
             // 
-            this.button1.Location = new System.Drawing.Point(12, 97);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(433, 44);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Студенты представленные на стипендию";
-            this.button1.UseVisualStyleBackColor = true;
+            this.reportScholarship.Location = new System.Drawing.Point(12, 97);
+            this.reportScholarship.Name = "reportScholarship";
+            this.reportScholarship.Size = new System.Drawing.Size(433, 44);
+            this.reportScholarship.TabIndex = 2;
+            this.reportScholarship.Text = "Студенты представленные на стипендию";
+            this.reportScholarship.UseVisualStyleBackColor = true;
+            this.reportScholarship.Click += new System.EventHandler(this.reportScholarship_Click);
             // 
-            // button2
+            // reportBadGrades
             // 
-            this.button2.Location = new System.Drawing.Point(12, 157);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(433, 44);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Студенты имеющие двойки";
-            this.button2.UseVisualStyleBackColor = true;
+            this.reportBadGrades.Location = new System.Drawing.Point(12, 157);
+            this.reportBadGrades.Name = "reportBadGrades";
+            this.reportBadGrades.Size = new System.Drawing.Size(433, 44);
+            this.reportBadGrades.TabIndex = 3;
+            this.reportBadGrades.Text = "Студенты имеющие двойки";
+            this.reportBadGrades.UseVisualStyleBackColor = true;
+            this.reportBadGrades.Click += new System.EventHandler(this.reportBadGrades_Click);
             // 
             // TeacherMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(854, 500);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.reportBadGrades);
+            this.Controls.Add(this.reportScholarship);
             this.Controls.Add(this.labelSubjects);
             this.Controls.Add(this.subjectsTeacherGriedView);
             this.Controls.Add(this.labelHi);
@@ -169,7 +171,7 @@
         private System.Windows.Forms.DataGridView subjectsTeacherGriedView;
         private System.Windows.Forms.Label labelSubjects;
         private System.Windows.Forms.DataGridViewTextBoxColumn subject_name;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button reportScholarship;
+        private System.Windows.Forms.Button reportBadGrades;
     }
 }
