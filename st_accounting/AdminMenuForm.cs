@@ -37,5 +37,19 @@ namespace st_accounting
             FacultiesForm facultiesForm = new FacultiesForm();
             facultiesForm.Show();
         }
+
+        private void teachersButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminTeachersForm teachersForm = new AdminTeachersForm();
+            teachersForm.Show();
+        }
+
+        private void studentsButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminStudentsForm studentsForm = new AdminStudentsForm();
+            studentsForm.Show();
+        }
     }
 }

@@ -32,5 +32,23 @@ namespace st_accounting
                 MessageBox.Show("Ошибка при получении данных (группы)", "Ошибка...", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        static public void getGroups()
+        {
+            try
+            {
+                msCommand.CommandText = @"
+                    SELECT 
+                        *
+                    FROM 
+                        groups";
+                dtGroups.Clear();
+                msDataAdapter.SelectCommand = msCommand;
+                msDataAdapter.Fill(dtGroups);
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка при получении данных (группы)", "Ошибка...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace st_accounting
 {
-    public partial class UsersForm : Form
+    public partial class AdminTeachersForm : Form
     {
-        public UsersForm()
+        public AdminTeachersForm()
         {
             InitializeComponent();
-            LoadUsers();
+            LoadTeachers();
         }
 
-        private void LoadUsers()
+        private void LoadTeachers()
         {
-            User_Class.getUsers();
-            usersDataGridView.DataSource = User_Class.dtUsers;
+            Teacher_Class.getTeachers();
+            teachersGDV.DataSource = Teacher_Class.dtTeachers;
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -33,17 +33,17 @@ namespace st_accounting
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            AdminUsersActionForm adminUsersActionForm = new AdminUsersActionForm(false);
-            adminUsersActionForm.ShowDialog();
+            AdminTeachersActionForm teachersActionForm = new AdminTeachersActionForm(false);
+            teachersActionForm.ShowDialog();
         }
 
-        static public string entrance_id;
+        static public string teacher_id;
 
         private void editBtn_Click(object sender, EventArgs e)
         {
-            entrance_id = usersDataGridView.CurrentRow.Cells[0].Value.ToString();
-            AdminUsersActionForm adminUsersActionForm = new AdminUsersActionForm(true, int.Parse(entrance_id));
-            adminUsersActionForm.ShowDialog();
+            teacher_id = teachersGDV.CurrentRow.Cells[0].Value.ToString();
+            AdminTeachersActionForm teachersActionForm = new AdminTeachersActionForm(true, int.Parse(teacher_id));
+            teachersActionForm.ShowDialog();
         }
     }
 }

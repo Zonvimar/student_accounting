@@ -54,7 +54,9 @@ namespace st_accounting
 
         private void reportScholarship_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            StudentWithGoodGrades studentsWithGoodGradesForm = new StudentWithGoodGrades();
+            studentsWithGoodGradesForm.Show();
         }
 
         private void reportBadGrades_Click(object sender, EventArgs e)
